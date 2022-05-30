@@ -33,6 +33,11 @@
 		66464AB2283FD04100122636 /* SigninPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66464AB1283FD04100122636 /* SigninPresenter.swift */; };
 		66464AB4283FD07F00122636 /* SigninInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66464AB3283FD07F00122636 /* SigninInteractor.swift */; };
 		66464AB6283FD7E000122636 /* SigninRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66464AB5283FD7E000122636 /* SigninRouter.swift */; };
+		66CEA9AB2844AB5800EA76D9 /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEA9AA2844AB5800EA76D9 /* BaseApi.swift */; };
+		66CEA9B72844ABA400EA76D9 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEA9AF2844ABA400EA76D9 /* RequestError.swift */; };
+		66CEA9B82844ABA400EA76D9 /* SomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEA9B12844ABA400EA76D9 /* SomeApiService.swift */; };
+		66CEA9B92844ABA400EA76D9 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEA9B22844ABA400EA76D9 /* NetworkProvider.swift */; };
+		66CEA9BA2844ABA400EA76D9 /* SomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEA9B42844ABA400EA76D9 /* SomeApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +68,11 @@
 		66464AB1283FD04100122636 /* SigninPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPresenter.swift; sourceTree = "<group>"; };
 		66464AB3283FD07F00122636 /* SigninInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninInteractor.swift; sourceTree = "<group>"; };
 		66464AB5283FD7E000122636 /* SigninRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRouter.swift; sourceTree = "<group>"; };
+		66CEA9AA2844AB5800EA76D9 /* BaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
+		66CEA9AF2844ABA400EA76D9 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		66CEA9B12844ABA400EA76D9 /* SomeApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeApiService.swift; sourceTree = "<group>"; };
+		66CEA9B22844ABA400EA76D9 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		66CEA9B42844ABA400EA76D9 /* SomeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 		66464A66283F556C00122636 /* AuthTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				66CEA9AC2844AB6900EA76D9 /* Networking */,
 				66464A8C283F5C8B00122636 /* Extensions */,
 				66464A86283F5BDF00122636 /* UI */,
 				66464A80283F568D00122636 /* Base */,
@@ -145,6 +156,7 @@
 			children = (
 				66464A81283F569900122636 /* BaseViewController.swift */,
 				66464AA7283F9DAE00122636 /* BaseError.swift */,
+				66CEA9AA2844AB5800EA76D9 /* BaseApi.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -230,6 +242,33 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		66CEA9AC2844AB6900EA76D9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				66CEA9B02844ABA400EA76D9 /* Services */,
+				66CEA9B32844ABA400EA76D9 /* Api */,
+				66CEA9B22844ABA400EA76D9 /* NetworkProvider.swift */,
+				66CEA9AF2844ABA400EA76D9 /* RequestError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		66CEA9B02844ABA400EA76D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66CEA9B12844ABA400EA76D9 /* SomeApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		66CEA9B32844ABA400EA76D9 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				66CEA9B42844ABA400EA76D9 /* SomeApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66464AB6283FD7E000122636 /* SigninRouter.swift in Sources */,
+				66CEA9BA2844ABA400EA76D9 /* SomeApi.swift in Sources */,
 				66464A8E283F5C9700122636 /* UIView+Extension.swift in Sources */,
 				66464A68283F556C00122636 /* AppDelegate.swift in Sources */,
 				66464AA4283F92CC00122636 /* LoginWorker.swift in Sources */,
@@ -318,14 +358,18 @@
 				66464A6A283F556C00122636 /* SceneDelegate.swift in Sources */,
 				66464AB2283FD04100122636 /* SigninPresenter.swift in Sources */,
 				66464A9B283F8D8900122636 /* LoginPresenter.swift in Sources */,
+				66CEA9AB2844AB5800EA76D9 /* BaseApi.swift in Sources */,
 				66464A7F283F568500122636 /* LoginVC.swift in Sources */,
 				66464A89283F5C0300122636 /* CustomTextField.swift in Sources */,
 				66464AB4283FD07F00122636 /* SigninInteractor.swift in Sources */,
 				66464A92283F6B3A00122636 /* UIButton+Extension.swift in Sources */,
 				66464A9E283F8F1900122636 /* LoginRouter.swift in Sources */,
 				66464AAE283FCFA500122636 /* SigninWorker.swift in Sources */,
+				66CEA9B82844ABA400EA76D9 /* SomeApiService.swift in Sources */,
+				66CEA9B92844ABA400EA76D9 /* NetworkProvider.swift in Sources */,
 				66464AB0283FCFCA00122636 /* SigninEntity.swift in Sources */,
 				66464AAC283FBF4A00122636 /* SigninVC.swift in Sources */,
+				66CEA9B72844ABA400EA76D9 /* RequestError.swift in Sources */,
 				66464A94283F76AB00122636 /* UIColor+Extension.swift in Sources */,
 				66464AAA283FA7BE00122636 /* ViewController.swift in Sources */,
 				66464A99283F8D7900122636 /* LoginInteractor.swift in Sources */,
