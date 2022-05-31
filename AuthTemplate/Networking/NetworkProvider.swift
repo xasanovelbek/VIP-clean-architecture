@@ -8,14 +8,7 @@
 import Foundation
 import Combine
 
-enum UploadResponse {
-    case progress(percentage: Double)
-    case response(_ model: Decodable)
-}
-
-
 class NetworkProvider: NSObject {
-    
     
     private let session: URLSession
     
@@ -70,19 +63,15 @@ class NetworkProvider: NSObject {
                     error.reason = "502 Gateway"
                     error.humanText = "Сервер недоступен (502)"
                     
-                    
-                    
                     return Fail(error: error)
                         .eraseToAnyPublisher()
                 } else {
                     let error = RequestError(data)
                     
-                    // Сервер вернул неожиданный код статуса
                     return Fail(error: error)
                         .eraseToAnyPublisher()
                 }
                 
             }.eraseToAnyPublisher()
     }
-    
 }
